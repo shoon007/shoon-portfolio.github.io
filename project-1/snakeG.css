@@ -1,0 +1,27 @@
+body{
+    margin:0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+background-color: rgba(0, 0, 0, 0.516)
+}
+
+
+canvas{
+    box-shadow: black 5px 5px 50px;
+    
+}
+.btn{
+    background-color: green;
+    border:0rem;
+    padding:10px 14px;
+    color: white;
+    border-radius:1.5rem;
+    cursor: pointer;
+    box-shadow: 0.5px 0.5px 5px rgba(0, 0, 0, 0.516);
+}
+.btn:active{
+    opacity: 0.6;
+}
