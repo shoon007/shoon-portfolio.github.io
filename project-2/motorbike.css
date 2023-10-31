@@ -1,0 +1,707 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #cdc8fc;
+    overflow: hidden;
+}
+
+.whole-div {
+  width:1200px;
+    overflow: hidden;
+    background-color: slateblue;
+    border-radius: 10px;
+   height: 80vh;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.before {
+    height: 100%;
+    background-color: aliceblue;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.decision-div {
+    position: absolute;
+    bottom: 20%;
+    visibility: hidden;
+}
+
+.active {
+    position: absolute;
+    bottom: 50%;
+    visibility: visible;
+}
+
+.cart {
+    font-size: 30px;
+    font-weight: 900;
+    color: #8b66b8;
+    margin-top: 160px;
+    margin-left: 30px
+}
+
+.buy {
+    padding: 10px 20px;
+    color: #8b66b8;
+    border-radius: 10px;
+    border: 2px solid #8b66b8;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 80px;
+    margin-left: 30px;
+}
+
+.back {
+    padding: 10px 20px;
+    background-color: #8b66b8;
+    border-radius: 10px;
+    border: 2px solid #8b66b8;
+    font-size: 20px;
+    color: aliceblue;
+    margin-left: 20px;
+    cursor: pointer;
+    z-index: 3
+}
+
+.after {
+    height: 100%;
+    background-color: aliceblue;
+    width: 70%;
+    position: absolute;
+    right: 30%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    z-index: 3;
+}
+
+.mode {
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    padding: 20px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon-div {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-icon {
+    width: 40px;
+    position: absolute;
+    left: 5%;
+    top: 12%;
+    visibility: visible;
+    animation: direction 1s linear infinite
+}
+
+@keyframes direction {
+    0% {
+        margin-top: 0px;
+    }
+    100% {
+        margin-top: 18px
+    }
+}
+
+.remove {
+    visibility: hidden;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.title h1 {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 180px;
+    white-space: nowrap;
+    margin: 0px;
+    text-align: left;
+    letter-spacing: 12px;
+}
+
+.unready-icon {
+    width: 40px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    padding: 4px 5px;
+    cursor: pointer;
+    border-bottom: 11px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4), -2px -4px 8px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    margin-bottom: 20px;
+    transform: rotate(-90deg);
+    margin-top: 30px
+}
+
+.unready-icon:hover {
+    border-bottom-color: #8b66b8;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: aliceblue
+}
+
+.ready-icon {
+    border-bottom-color: #8b66b8;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: rotate(0deg);
+}
+
+.check {
+    padding: 13px 15px;
+    font-size: 23px;
+    background-color: #cdc8fc;
+    border-radius: 10px;
+    border: none;
+    margin-top: 0px;
+    margin-left: 50px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0%;
+    visibility: hidden;
+    transition: all 0.3s;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.check:hover {
+    filter: brightness(77%)
+}
+
+.check:active {
+    box-shadow: inset 3px 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.check.active {
+    visibility: visible;
+    bottom: 14%;
+}
+
+.info {
+    opacity: 0.1;
+    transition: opacity 0.3s linear;
+}
+
+.opacity {
+    opacity: 1;
+}
+
+.info .title {
+    color: #3e0a72;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    letter-spacing: 1.8px;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    visibility: visible;
+    transition: all 0.1s;
+}
+
+.info .change {
+    position: absolute;
+    top: 30%;
+    visibility: hidden;
+}
+
+.info .wheels {
+    color: #7504e5;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    right: 25%;
+    bottom: 80%;
+    visibility: visible;
+    transition: all 0.1s;
+}
+
+.info .change2 {
+    position: absolute;
+    right: -10%;
+    visibility: hidden;
+}
+
+.spans-div {
+    display: flex;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
+
+.info .change3 {
+    position: absolute;
+    bottom: -10%;
+    visibility: hidden
+}
+
+span {
+    background-color: #cdc8fc;
+    height: 30px;
+    width: 40px;
+    margin-left: 20px;
+    padding: 8px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    transition: all 0.01s;
+}
+
+span:active {
+    box-shadow: inset 2px 4px 8px rgba(0, 0, 0, 0);
+}
+
+span img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: 4px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.bike-div {
+    position: relative;
+}
+
+.bike {
+    width: 300px;
+    position: absolute;
+    top: 150px;
+    left: 80px;
+    z-index: 1;
+    transform: rotate(-90deg);
+}
+
+.pink-bike {
+    transform: rotate(0deg);
+}
+
+
+/* .origin-f{
+    width:150px;
+    position: absolute;
+    top:276px;
+    left:280px
+}
+.origin-b{
+    width:150px;
+    position: absolute;
+top:276px;
+left: 30px;
+
+}
+ */
+
+.hidden {
+    visibility: hidden
+}
+
+.origin-hidden {
+    visibility: hidden;
+}
+
+.origin-b {
+    animation: back 1s linear;
+}
+
+.origin-f {
+    animation: front 1s linear
+}
+
+@keyframes back {
+    0% {
+        position: absolute;
+        top: 313px;
+        left: 238px;
+    }
+    100% {
+        position: absolute;
+        top: 276px;
+        left: 30px;
+    }
+}
+
+@keyframes front {
+    0% {
+        position: absolute;
+        top: 60px;
+        left: 238px;
+    }
+    100% {
+        position: absolute;
+        top: 276px;
+        left: 280px
+    }
+}
+
+.origin-b {
+    animation: back 0.3s linear forwards;
+}
+
+.origin-f {
+    animation: front 0.3s linear forwards;
+}
+
+.origin-back {
+    width: 150px;
+    position: absolute;
+    top: 313px;
+    left: 238px;
+}
+
+.origin-front {
+    width: 150px;
+    position: absolute;
+    top: 60px;
+    left: 238px;
+}
+
+.wheel1-back {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 270px;
+    left: 26px;
+}
+
+.wheel1-front {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 272px;
+    left: 278px;
+}
+
+.w1-b {
+    animation: w1-back 0.8s linear forwards;
+}
+
+.w1-f {
+    animation: w1-front 0.8s linear forwards;
+}
+
+.w2-b {
+    animation: w1-back 0.8s linear;
+}
+
+.w2-f {
+    animation: w1-front 0.8s linear;
+}
+
+.w3-b {
+    animation: w1-back 0.8s linear;
+}
+
+.w3-f {
+    animation: w1-front 0.8s linear;
+}
+
+.w4-b {
+    animation: w1-back 0.8s linear;
+}
+
+.w4-f {
+    animation: w1-front 0.8s linear;
+}
+
+@keyframes w1-back {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        transform: rotate(100deg);
+    }
+    30% {
+        opacity: 0;
+    }
+    50% {
+        transform: rotate(300deg);
+        transform: translate(-540%);
+    }
+}
+
+@keyframes w1-front {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(100deg)
+    }
+    30% {
+        opacity: 0;
+    }
+    50% {
+        transform: translate(560%);
+    }
+}
+
+.wheel1-move {
+    animation: w1-move 1s linear forwards;
+}
+
+@keyframes w1-move {
+    0% {
+        transform: translate(200px);
+        transform: rotate(-160deg);
+    }
+    100% {
+        transform: translate(500px);
+    }
+}
+
+.wheel1-backward {
+    animation: w1-backward 1s linear both;
+}
+
+@keyframes w1-backward {
+    0% {
+        transform: translate(500px);
+    }
+    100% {
+        transform: translate(200px);
+        transform: rotate(-160deg);
+    }
+}
+
+.wheel2-back {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 270px;
+    left: 26px;
+}
+
+.wheel2-front {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 272px;
+    left: 278px;
+}
+
+.wheel1-hidden {
+    visibility: hidden;
+}
+
+.wheel2-hidden {
+    visibility: hidden;
+}
+
+.wheel3-hidden {
+    visibility: hidden;
+}
+
+.wheel4-hidden {
+    visibility: hidden;
+}
+
+.wheel3-back {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 270px;
+    left: 26px;
+}
+
+.wheel3-front {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 272px;
+    left: 278px;
+}
+
+.wheel4-back {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 270px;
+    left: 26px;
+}
+
+.wheel4-front {
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    position: absolute;
+    top: 269px;
+    left: 280px;
+}
+
+.bicycle-container {
+    position: relative;
+}
+
+.animate {
+    animation: move 1s linear;
+}
+
+.animate2 {
+    animation: move 1s linear;
+}
+
+.animate3 {
+    animation: move 1s linear;
+}
+
+.animate4 {
+    animation: move 1s linear;
+}
+
+@keyframes move {
+    0%,
+    100% {
+        position: absolute;
+        top: 0px
+    }
+    50% {
+        position: absolute;
+        top: -90px
+    }
+}
+
+.forward {
+    animation: moving 1s linear both;
+}
+
+@keyframes moving {
+    0% {
+        position: absolute;
+        transform: translateX(0px);
+    }
+    100% {
+        position: absolute;
+        transform: translateX(500px);
+    }
+}
+
+.backward {
+    animation: moving-b 1s linear both;
+}
+
+@keyframes moving-b {
+    0% {
+        position: absolute;
+        transform: translateX(500px)
+    }
+    100% {
+        position: absolute;
+        transform: translateX(0)
+    }
+}
+
+@media (max-width:1200px) {
+    .title h1 {
+        color: rgba(0, 0, 0, 0.2);
+        font-size: 80px;
+        white-space: nowrap;
+        margin: 0px;
+        text-align: left;
+        letter-spacing: 1px;
+    }
+    .whole-div{
+        width: 95%;
+    }
+    .bike{
+        width: 200px;
+        left:0px
+    }
+    .info .title {
+        font-size: 30px;
+        right: 0%;
+        left:2%
+    }
+    .check{
+        font-size: 17px;
+        padding:10px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+        span{
+            padding:3px
+        }
+    .info .wheels{
+        font-size: 20px;
+    }
+
+    .wheel1-back {
+        width: 100px;
+
+        top: 234px;
+        left: -34px;
+    }
+    .wheel1-front {
+        width: 100px;
+        top: 230px;
+        left: 130px;
+    }
+    .wheel2-back {
+        width: 100px;
+        top: 230px;
+        left: -33px;
+    }
+
+    .wheel2-front {
+        width: 100px;
+        top: 230px;
+        left: 133px;
+    }
+    .wheel3-back {
+        width: 100px;
+        top: 230px;
+        left: -33px;
+    }
+
+    .wheel3-front {
+        width: 100px;
+        top: 229px;
+        left: 130px;
+    }
+
+    .wheel4-back {
+        width: 100px;
+        top: 230px;
+        left: -30px;
+    }
+
+    .wheel4-front {
+        width: 100px;
+        top: 229px;
+        left: 135px;
+    }
+    .buy,.back{
+        font-size: 17px;
+        padding:10px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+}

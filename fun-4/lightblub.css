@@ -1,0 +1,219 @@
+body{
+    background:purple;
+    color:#fff;
+}
+
+
+h2{
+    color:#fff;
+    position: relative;
+    margin-top: 200px;
+    text-align:center;
+    letter-spacing: 0.2em;
+    font-size:4em;
+    font-family:'Mountains of Christmas';
+    text-shadow:0px 0px 8px rgba(255,65,185,1)
+}
+#wire{
+    text-align:center;
+    white-space: nowrap;
+position:absolute;
+    padding:0;
+    width:100%;
+    top: -80px;
+    border-bottom: 3px solid #222;
+    height:100px;
+}
+#wire li:before{
+    content:" ";
+    position:absolute;
+    width:14px;
+    height:10px;
+    border-radius:4px;
+    top:-5px;
+    left:0;
+    background:#444;
+}
+#wire li{
+
+    list-style-type: none ;
+    position:relative;
+    margin:0 15px;
+    padding:0;
+    display:inline-block;
+    width:15px;
+    height:30px;
+border-radius:50%;
+top:102px;
+background-color:#fff;
+animation-name:even-flash;
+animation-duration:1s;
+animation-iteration-count:infinite;
+animation-fill-mode:both;
+
+}
+#wire li:nth-child(odd){
+    animation-name:pink-flash;
+}
+ #wire li:nth-child(3){
+    animation-name:green-flash;
+}
+#wire li:nth-child(6){
+    animation-name:green-flash;
+}
+#wire li:nth-child(9){
+    animation-name:green-flash;
+}
+#wire li:nth-child(12){
+    animation-name:green-flash;
+}
+#wire li:nth-child(15){
+    animation-name:green-flash;
+}
+#wire li:nth-child(18){
+    animation-name:green-flash;
+}
+#wire li:nth-child(21){
+    animation-name:green-flash;
+
+}
+#wire li:nth-child(24){
+    animation-name:green-flash;
+    
+}
+#wire li:nth-child(27){
+    animation-name:green-flash;
+    
+}
+#wire li:nth-child(30){
+    animation-name:green-flash;
+    
+}
+
+ 
+
+
+@keyframes even-flash{
+    0%,100%{
+        background-color:rgba(255,230,65,1);
+    box-shadow:0px 2px 20px 4px rgba(255,230,65,1);
+
+    }
+    50%{
+        background: rgba(255,230,65,0.5);
+        box-shadow:0px 2px 20px 4px rgba(255,230,65,0.3);
+
+    }
+
+}
+
+
+
+@keyframes pink-flash{
+    50% {
+        background-color:rgba(255,65,185,1);
+        box-shadow:0px 2px 20px 4px rgba(255,65,185,1);
+
+    }
+ 
+    0%,100%  {
+        background-color:rgba(255,230,65,0.5);
+        box-shadow:0px 2px 20px 4px rgba(255,65,185,0.3) ;
+
+    }
+}
+
+
+
+
+@keyframes green-flash{
+    0%,100%{
+        background-color:rgba(0,255,0,1);
+    box-shadow:0px 2px 20px 4px rgba(0,255,0,1);
+
+    }
+    50%{
+        background: rgba(0,255,0,0.5);
+        box-shadow:0px 2px 20px 4px rgba(0,255,0,0.3);
+
+    }
+
+}
+
+form{
+    position:relative;
+    width:100%;
+    max-width:600px;
+    margin:20% auto;
+}
+form label{
+    font-size:32px;
+    letter-spacing:1px;
+}
+form input{
+    font-size:20px;
+    margin:0 10px;
+    padding:8px 8px 6px;
+    border:0;
+    color:#444;
+
+}
+.tooltip{
+    position:relative;
+    background:rgba(0,0,0,0.3);
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:20px;
+    cursor:help;
+
+}
+.tooltip::before,.tooltip::after{
+    position:absolute;
+    left:50%;
+opacity:0;
+transition: all ease 0.3s;
+
+}
+.tooltip::before{
+    content:"";
+    border-width:10px 8px 0 8px;
+    border-style:solid;
+    border-color:rgba(0,0,0,0.3)   transparent transparent transparent;
+    margin-left:-8px;
+    top:-20px;
+    
+}
+
+.tooltip::after{
+    content:attr(data-tooltip);
+    background:rgba(0,0,0,0.3);
+    top:-20px;
+    font-size:14px;
+    width:300px;
+    margin-left:-150px;
+    padding:14px;
+    border-radius:10px;
+    color:#fff;
+    transform:translateY(-100%);
+
+
+}
+.tooltip:hover::before,.tooltip:hover::after{
+    opacity:1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
