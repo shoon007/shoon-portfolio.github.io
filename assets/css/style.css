@@ -883,7 +883,7 @@ body.active { overflow: hidden; }
   z-index: -1;
 }
 
-.footer-bg::before {
+.footer-bg::before,.footer-bg::after {
   inset: 0;
   background-image: var(--gradient-2);
 }
