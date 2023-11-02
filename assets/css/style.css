@@ -1745,3 +1745,26 @@ body.active { overflow: hidden; }
   .footer-top .container { max-width: 1200px; }
 
 }
+@media screen and (max-width:500px) {
+
+  h1{
+    font-size: 3rem !important;
+  }
+  .hero .wrapper .strong{
+    width: 100px;
+    font-size: 2.3rem;
+  }
+
+  .about .section-text{
+    font-size: 17px;
+  }
+  .section-subtitle{
+    font-size: 3rem;
+  }
+  .category-card .card-title{
+    font-size: 1.4rem !important;
+  }
+  .about .section-title{
+    font-size: 2.3rem !important;
+  }
+}
