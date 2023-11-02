@@ -357,7 +357,7 @@ body.active { overflow: hidden; }
   top: 0;
   right: -280px;
   background-color: var(--eerie-black);
-  height: 100vh;
+bottom:0;
   max-width: 280px;
   width: 100%;
   padding: 25px;
