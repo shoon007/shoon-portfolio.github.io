@@ -639,6 +639,7 @@ bottom:0;
   place-content: center;
   margin-inline: auto;
   margin-block-start: 55px;
+  margin-bottom:50px;
   border: 1px solid var(--white_a15);
   border-radius: var(--radius-circle);
   transition: var(--transition-2);
