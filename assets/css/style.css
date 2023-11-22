@@ -1251,6 +1251,7 @@ bottom:0;
     width: 85px;
     height: 85px;
     margin-block-start: 100px;
+    margin-bottom:50px;
   }
 
   .gallery .scroll-down img { width: 26px; }
