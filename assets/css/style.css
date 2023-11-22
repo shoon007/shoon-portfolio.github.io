@@ -1235,7 +1235,7 @@ bottom:0;
 
   .hero-banner {
     position: absolute;
-    top: 30%;
+    top: 0%;
     right: 0;
     transform: translateY(-50%);
     max-width: 200px;
