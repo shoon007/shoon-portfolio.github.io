@@ -620,7 +620,9 @@ bottom:0;
 }
 
 .gallery-item:is(:hover, :focus-within) .gallery-card { animation-play-state: paused; }
-
+a.scroll-down{
+margin-bottom:30px;
+}
 .gallery .scroll-down {
   width: 60px;
   height: 60px;
@@ -628,7 +630,6 @@ bottom:0;
   place-content: center;
   margin-inline: auto;
   margin-block-start: 55px;
-  margin-bottom:50px;
   border: 1px solid var(--white_a15);
   border-radius: var(--radius-circle);
   transition: var(--transition-2);
@@ -1251,7 +1252,7 @@ bottom:0;
     width: 85px;
     height: 85px;
     margin-block-start: 100px;
-    margin-bottom:50px;
+
   }
 
   .gallery .scroll-down img { width: 26px; }
